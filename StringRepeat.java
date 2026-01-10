@@ -1,17 +1,16 @@
 import java.util.Scanner;
-class Main{
-    public static void main(String[] args){
+class Test{
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("please enter the string: ");
-        String s = sc.nextLine();
+        String s = sc.next();
         int count = 1;
-        for(int i = 0;i<s.length();i++){
-            if(i<s.length()-1&&s.charAt(i) == s.charAt(i+1)){
+        for(int i =1;i<s.length();i++){
+            if(i<s.length()-1 && s.charAt(i) == s.charAt(i+1)){
                 count++;
             }
             else{
-                System.out.print(s.charAt(i)+""+count);
-                count =1;
+                System.out.print(s.charAt(i)+ ""+count);
+                count=1;
             }
         }
     }
